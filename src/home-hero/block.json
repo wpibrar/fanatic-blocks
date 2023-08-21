@@ -1,0 +1,46 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fanatic-blocks/home-hero",
+	"version": "0.1.0",
+	"title": "Home Hero",
+	"category": "text",
+	"icon": "smiley",
+	"description": "Example block scaffolded with Create Block tool.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+        "heading": {
+            "type": "string",
+            "source": "html",
+            "default": "",
+            "selector": "h1"
+        },
+		"subheading": {
+            "type": "string",
+            "source": "html",
+            "default": "",
+            "selector": "h2"
+        },
+		"content": {
+			"type": "string",
+            "source": "html",
+			"selector": "p"
+		},
+		"image": {
+			"type": "object",
+            "default": {
+				"url": "",
+				"alt": "",
+				"srcset": []
+			}
+		}
+    },
+	"textdomain": "home-hero",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}
