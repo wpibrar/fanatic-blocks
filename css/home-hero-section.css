@@ -1,0 +1,115 @@
+.wp-block-codloo-blocks-home-hero-section{
+	background-color: #f8fafc;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.wp-block-codloo-blocks-home-hero-section div.contained-row > div[class^="column"]:first-child,
+.wp-block-codloo-blocks-home-hero-section div.contained-row > div[class^="column"]:last-child{
+	flex: 0 0 100% !important;
+}
+
+.wp-block-codloo-blocks-home-hero-section div.contained-row > div[class^="column"]:last-child{
+	display: none;
+}
+
+.wp-block-codloo-blocks-home-hero-section div.contained-row div[class^="column"] h1{
+	font-size: 35px;
+	font-weight: bold;
+	margin-bottom: 20px;
+	line-height: 40px;
+	text-align: center;
+}
+
+.wp-block-codloo-blocks-home-hero-section div.contained-row div[class^="column"] h2{
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 20px;
+	line-height: 30px;
+	text-align: center;
+}
+
+.wp-block-codloo-blocks-home-hero-section div.contained-row div[class^="column"] p{
+	font-size: 17px;
+	font-weight: normal;
+	line-height: 24px;
+	text-align: center;
+}
+
+@media(min-width: 576px){
+
+	.wp-block-codloo-blocks-home-hero-section div.contained-row div[class^="column"] h1{
+		font-size: 60px;
+		line-height: 68px;
+	}
+
+}
+
+@media(min-width: 768px){
+
+	.wp-block-codloo-blocks-home-hero-section div.contained-row div[class^="column"]{
+		padding-top: 25px;
+		padding-bottom: 25px;
+	}
+
+	.wp-block-codloo-blocks-home-hero-section div.contained-row div[class^="column"] h1{
+		font-size: 60px;
+		line-height: 68px;
+	}
+
+	.wp-block-codloo-blocks-home-hero-section div.contained-row > div[class^="column"]:last-child{
+		display: block;
+	}
+
+}
+
+@media(min-width: 992px){
+
+	.wp-block-codloo-blocks-home-hero-section div.contained-row > div[class^="column"]:first-child{
+		flex: 0 0 60% !important;
+	}
+
+	.wp-block-codloo-blocks-home-hero-section div.contained-row > div[class^="column"]:last-child{
+		flex: 0 0 40% !important;
+	}
+
+	.wp-block-codloo-blocks-home-hero-section div.contained-row div[class^="column"] h1,
+	.wp-block-codloo-blocks-home-hero-section div.contained-row div[class^="column"] h2,
+	.wp-block-codloo-blocks-home-hero-section div.contained-row div[class^="column"] p{
+		text-align: left;
+	}
+
+}
+
+@media(min-width: 1400px){
+
+	.wp-block-codloo-blocks-home-hero-section div.contained-row > div[class^="column"]:first-child{
+		flex: 0 0 65% !important;
+	}
+
+	.wp-block-codloo-blocks-home-hero-section div.contained-row > div[class^="column"]:last-child{
+		flex: 0 0 35% !important;
+	}
+
+	.wp-block-codloo-blocks-home-hero-section div.contained-row div[class^="column"]{
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+
+	.wp-block-codloo-blocks-home-hero-section div.contained-row div[class^="column"] h1{
+		font-size: 75px;
+		line-height: 75px;
+	}
+
+	.wp-block-codloo-blocks-home-hero-section div.contained-row div[class^="column"] h2{
+		font-size: 35px;
+		line-height: 40px;
+	}
+
+	.wp-block-codloo-blocks-home-hero-section div.contained-row div[class^="column"] p{
+		font-size: 24px;
+		font-weight: normal;
+		line-height: 30px;
+	}
+
+}

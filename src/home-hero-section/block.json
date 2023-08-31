@@ -1,0 +1,32 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "codloo-blocks/home-hero-section",
+	"version": "1.0.0",
+	"title": "Home Hero Section",
+	"category": "codloo",
+	"icon": "smiley",
+	"description": "Example block scaffolded with Create Block tool.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "home-hero-section",
+	"style": [ "theme-layout", "home-hero-section" ],
+	"editorStyle": [ "theme-layout", "home-hero-section" ],
+	"editorScript": "file:./index.js",
+	"attributes": {
+        "heading": {
+            "type": "string",
+            "default": ""
+        },
+		"subheading": {
+            "type": "string",
+            "default": ""
+        },
+		"content": {
+            "type": "string",
+            "default": ""
+        }
+    }
+}
