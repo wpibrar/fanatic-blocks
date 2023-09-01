@@ -32,28 +32,47 @@ export default function Edit({attributes, setAttributes}) {
 
 		<div { ...useBlockProps() }>
 			
-			<InspectorControls key="setting">
-				<div id="gutenpride-controls" style={{paddingLeft: '15px', paddingRight: '15px'}}>
+			<InspectorControls key="setting" style={{paddingBottom: '25px'}}>
+				<div id="gutenpride-controls" style={{paddingLeft: '15px', paddingRight: '15px', paddingBottom: '25px'}}>
 
 					<fieldset>
-						<legend className="blocks-base-control__label">
+						<label className="blocks-base-control__label" style={{marginBottom: '5px', display: 'block'}}>
 							{ __( 'Expertise Controll', 'expertise-block' ) }
-						</legend>
+						</label>
 						<ButtonGroup>
 							<Button variant="primary" onClick={addExpertise}>Add Expertise +</Button>
-							<Button variant="primary">Less Expertise -</Button>
 						</ButtonGroup>
 					</fieldset>
 				</div>
 			</InspectorControls>
 
 			<div className='contained'>
-				<div className='contained-row align-items-center'>
+				<div className='contained-row'>
+					<div className="column-full">
+						<div>
+							<RichText
+								tagName="h2"
+								value={ attributes.heading }
+								allowedFormats={ [ 'core/bold', 'core/italic' ] }
+								onChange={ ( content ) => setAttributes( { heading: content } ) }
+								placeholder={ __( 'Heading...' ) }
+							/>
+							<RichText
+								tagName="p"
+								value={ attributes.text }
+								allowedFormats={ [ 'core/bold', 'core/italic' ] }
+								onChange={ ( content ) => setAttributes( { text: content } ) }
+								placeholder={ __( 'Text...' ) }
+							/>
+						</div>
+					</div>
+				</div>
+				<div className='contained-row'>
 					{attributes.expertise.map((expertiseItem, index) => (
 						<div key={index} className="column-half" style={{position: 'relative'}}>
 							<button
 							onClick={ () => removeExpertise(index) }
-							style={{position: 'absolute', top: 0, right: 0}}>-</button>
+							style={{position: 'absolute', top: 0, right: 0, paddingLeft: '5px', paddingRight: '5px'}}>-</button>
 							<RichText
 								tagName="h3"
 								value={ expertiseItem.title }
@@ -70,7 +89,7 @@ export default function Edit({attributes, setAttributes}) {
 							<RichText
 								tagName="p"
 								value={ expertiseItem.des }
-								allowedFormats={ [ 'core/bold', 'core/italic' ] }
+								allowedFormats={ [ 'core/bold', 'core/italic', 'core/link' ] }
 								onChange={ ( newDes ) =>
 									{
 										const newExpertise = [...attributes.expertise];

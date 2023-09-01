@@ -22,13 +22,17 @@
   ],
   "editorScript": "file:./index.js",
   "attributes": {
-    "lastKey": {
-      "type": "number",
-      "default": 0
-    },
     "expertise": {
       "type": "array",
       "default": []
+    },
+    "heading": {
+      "type": "string",
+      "default": ""
+    },
+    "text": {
+      "type": "string",
+      "default": ""
     }
   }
 }

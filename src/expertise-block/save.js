@@ -4,7 +4,7 @@
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps, RichText } from '@wordpress/block-editor';
 
 /**
  * The save function defines the way in which the different attributes should
@@ -15,10 +15,42 @@ import { useBlockProps } from '@wordpress/block-editor';
  *
  * @return {WPElement} Element to render.
  */
-export default function save() {
+export default function save({ attributes }) {
 	return (
-		<p { ...useBlockProps.save() }>
-			{ 'Starter Block – hello from the saved content!' }
-		</p>
+		<div { ...useBlockProps.save() }>
+			<div className='contained'>
+				<div className='contained-row'>
+					<div className="column-full">
+						<div>
+							<RichText.Content
+								tagName="h2"
+								value={ attributes.heading }
+								className="section-heading"
+							/>
+							<RichText.Content
+								tagName="p"
+								value={ attributes.text }
+							/>
+						</div>
+					</div>
+				</div>
+				<div className='contained-row'>
+					{attributes.expertise.map((expertiseItem, index) => (
+						<div key={index} className="column-half">
+							<div>
+								<RichText.Content
+									tagName="h3"
+									value={ expertiseItem.title }
+								/>
+								<RichText.Content
+									tagName="p"
+									value={ expertiseItem.des }
+								/>
+							</div>
+						</div>
+					))}
+				</div>
+			</div>
+		</div>
 	);
 }

@@ -1,0 +1,21 @@
+.wp-block-codloo-blocks-expertise-block .contained .contained-row .column-half > div > h3{
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.wp-block-codloo-blocks-expertise-block{
+    padding-top: 75px;
+    margin-bottom: 75px;
+}
+
+.wp-block-codloo-blocks-expertise-block .contained .contained-row .column-half{
+    margin-bottom: 30px;
+}
+
+.wp-block-codloo-blocks-expertise-block .contained .contained-row .column-half > div{
+    padding: 25px;
+    border: 1px solid rgb(212, 255, 163);
+    background-color: rgb(247, 255, 239);
+    border-radius: 10px;
+}
+

@@ -50,24 +50,50 @@ function Edit({
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)()
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InspectorControls, {
-    key: "setting"
+    key: "setting",
+    style: {
+      paddingBottom: '25px'
+    }
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     id: "gutenpride-controls",
     style: {
       paddingLeft: '15px',
-      paddingRight: '15px'
+      paddingRight: '15px',
+      paddingBottom: '25px'
     }
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("fieldset", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("legend", {
-    className: "blocks-base-control__label"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("fieldset", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("label", {
+    className: "blocks-base-control__label",
+    style: {
+      marginBottom: '5px',
+      display: 'block'
+    }
   }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Expertise Controll', 'expertise-block')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ButtonGroup, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Button, {
     variant: "primary",
     onClick: addExpertise
-  }, "Add Expertise +"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Button, {
-    variant: "primary"
-  }, "Less Expertise -"))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  }, "Add Expertise +"))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "contained"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "contained-row align-items-center"
+    className: "contained-row"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "column-full"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
+    tagName: "h2",
+    value: attributes.heading,
+    allowedFormats: ['core/bold', 'core/italic'],
+    onChange: content => setAttributes({
+      heading: content
+    }),
+    placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Heading...')
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
+    tagName: "p",
+    value: attributes.text,
+    allowedFormats: ['core/bold', 'core/italic'],
+    onChange: content => setAttributes({
+      text: content
+    }),
+    placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Text...')
+  })))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "contained-row"
   }, attributes.expertise.map((expertiseItem, index) => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     key: index,
     className: "column-half",
@@ -79,7 +105,9 @@ function Edit({
     style: {
       position: 'absolute',
       top: 0,
-      right: 0
+      right: 0,
+      paddingLeft: '5px',
+      paddingRight: '5px'
     }
   }, "-"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
     tagName: "h3",
@@ -96,7 +124,7 @@ function Edit({
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
     tagName: "p",
     value: expertiseItem.des,
-    allowedFormats: ['core/bold', 'core/italic'],
+    allowedFormats: ['core/bold', 'core/italic', 'core/link'],
     onChange: newDes => {
       const newExpertise = [...attributes.expertise];
       newExpertise[index].des = newDes;
@@ -196,10 +224,36 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @return {WPElement} Element to render.
  */
-function save() {
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+function save({
+  attributes
+}) {
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     ..._wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps.save()
-  }, 'Starter Block – hello from the saved content!');
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "contained"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "contained-row"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "column-full"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
+    tagName: "h2",
+    value: attributes.heading,
+    className: "section-heading"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
+    tagName: "p",
+    value: attributes.text
+  })))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "contained-row"
+  }, attributes.expertise.map((expertiseItem, index) => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    key: index,
+    className: "column-half"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
+    tagName: "h3",
+    value: expertiseItem.title
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
+    tagName: "p",
+    value: expertiseItem.des
+  })))))));
 }
 
 /***/ }),
@@ -284,7 +338,7 @@ module.exports = window["wp"]["i18n"];
   \****************************************/
 /***/ (function(module) {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"codloo-blocks/expertise-block","version":"0.1.0","title":"Expertise Block","category":"codloo","icon":"smiley","description":"Display the expertise section","example":{},"supports":{"html":false},"textdomain":"expertise-block","editorStyle":["theme-layout","expertise-block"],"style":["theme-layout","expertise-block"],"editorScript":"file:./index.js","attributes":{"lastKey":{"type":"number","default":0},"expertise":{"type":"array","default":[]}}}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"codloo-blocks/expertise-block","version":"0.1.0","title":"Expertise Block","category":"codloo","icon":"smiley","description":"Display the expertise section","example":{},"supports":{"html":false},"textdomain":"expertise-block","editorStyle":["theme-layout","expertise-block"],"style":["theme-layout","expertise-block"],"editorScript":"file:./index.js","attributes":{"expertise":{"type":"array","default":[]},"heading":{"type":"string","default":""},"text":{"type":"string","default":""}}}');
 
 /***/ })
 

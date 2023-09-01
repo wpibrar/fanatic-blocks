@@ -18,11 +18,11 @@ define( 'CL_URL', plugin_dir_url( __FILE__ ) );
 function wpdocs_register_plugin_styles() {
 
 	if ( has_block( 'codloo-blocks/home-hero-section' ) ) {
-		wp_register_style( 'home-hero-section', CL_URL . 'css/home-hero-section.css', array(), '1.0.0' );
+		wp_register_style( 'home-hero-section', CL_URL . 'css/home-hero-section.css', array( 'theme-layout' ), '1.0.0' );
 	}
 
 	if ( has_block( 'codloo-blocks/expertise-block' ) ) {
-		wp_register_style( 'expertise-block', CL_URL . 'expertise-block.css', array(), '1.0.0' );
+		wp_register_style( 'expertise-block', CL_URL . 'css/expertise-block.css', array( 'theme-layout' ), '1.0.0' );
 	}
 
 }
