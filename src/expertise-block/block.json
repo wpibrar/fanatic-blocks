@@ -1,0 +1,28 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "codloo-blocks/expertise-block",
+	"version": "0.1.0",
+	"title": "Expertise Block",
+	"category": "codloo",
+	"icon": "smiley",
+	"description": "Display the expertise section",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "expertise-block",
+	"editorStyle": [ "theme-layout", "expertise-block" ],
+	"style": [ "theme-layout", "expertise-block" ],
+	"editorScript": "file:./index.js",
+	"attributes": {
+        "lastKey": {
+            "type": "number",
+            "default": 0
+        },
+		"expertise": {
+            "type": "array",
+            "default": []
+        }
+    }
+}
