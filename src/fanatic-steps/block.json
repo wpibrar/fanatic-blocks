@@ -1,0 +1,32 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "codloo-blocks/fanatic-steps",
+	"version": "0.1.0",
+	"title": "Fanatic Steps Block",
+	"category": "codloo",
+	"icon": "smiley",
+	"description": "Display the steps section",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "fanatic-steps",
+	"editorStyle": [ "theme-layout", "fanatic-steps" ],
+	"style": [ "theme-layout", "fanatic-steps" ],
+	"editorScript": "file:./index.js",
+	"attributes": {
+		"steps": {
+            "type": "array",
+            "default": []
+        },
+		"heading": {
+            "type": "string",
+            "default": ""
+        },
+		"text": {
+            "type": "string",
+            "default": ""
+        }
+    }
+}

@@ -28,6 +28,9 @@ function wpdocs_register_plugin_styles() {
 	if ( has_block( 'codloo-blocks/testimonials' ) ) {
 		wp_register_style( 'testimonials', CL_URL . 'css/testimonials.css', array( 'theme-layout' ), '1.0.0' );
 	}
+	if ( has_block( 'codloo-blocks/fanatic-steps' ) ) {
+		wp_register_style( 'fanatic-steps', CL_URL . 'css/fanatic-steps.css', array( 'theme-layout' ), '1.0.0' );
+	}
 
 
 	
@@ -65,6 +68,7 @@ function create_block_starter_block_block_init() {
 	register_block_type( __DIR__ . '/build/home-hero-section' );
 	register_block_type( __DIR__ . '/build/expertise-block' );
 	register_block_type( __DIR__ . '/build/testimonials' );
+	register_block_type( __DIR__ . '/build/fanatic-steps' );
 
 }
 add_action( 'init', 'create_block_starter_block_block_init' );
