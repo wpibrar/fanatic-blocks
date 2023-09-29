@@ -35,6 +35,30 @@ function wpdocs_register_plugin_styles() {
 }
 add_action( 'enqueue_block_assets', 'wpdocs_register_plugin_styles' );
 
+
+function gb_gutenberg_admin_styles() {
+
+    ?>
+        <style>
+            /* Main column width */
+            .wp-block {
+                max-width: 720px;
+            }
+ 
+            /* Width of "wide" blocks */
+            .wp-block[data-align="wide"] {
+                max-width: 1080px;
+            }
+ 
+            /* Width of "full-wide" blocks */
+            .wp-block[data-align="full"] {
+                max-width: none;
+            }	
+        </style>
+    <?php
+}
+add_action('admin_head', 'gb_gutenberg_admin_styles');
+
 /**
  * Add category Codloo to the blocks editor.
  *

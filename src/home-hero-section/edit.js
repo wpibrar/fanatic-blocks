@@ -12,7 +12,7 @@ export default function Edit({ attributes, setAttributes }) {
 	// console.log(attributes);
 
 	return (
-		<div { ...useBlockProps() }>
+		<div { ...useBlockProps() } style={{maxWidth: '100%'}}>
 			<div className='contained'>
 				<div className='contained-row align-items-center'>
 					<div className='column-half'>
